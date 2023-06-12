@@ -1,0 +1,51 @@
+// _mqueries
+// ========
+
+/*==== Media Queries ====*/
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+ /* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+@media screen and (min-width: 860px) {
+
+}
+
+@media screen and (max-width: 860px) {
+
+}
+
+@media only screen and (max-width : 736px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+@media screen and (max-width: 320px) {
+
+}
+

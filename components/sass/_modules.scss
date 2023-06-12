@@ -1,0 +1,69 @@
+/*==== Logo ====*/
+
+
+/*==== #Back-to-Top Icon ====*/
+#btt-icon {
+  width: 46px;
+  height: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgba(136, 136, 136, 0.18); //rgba(126, 126, 126, 0.5);
+  cursor: pointer;
+  border-radius: .2rem;
+  display: none;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // &:hover {
+  //   animation: bounceUp .4s ease-out infinite;  
+  // }
+}
+
+#btt-arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 20px 15px;
+  border-color: transparent transparent #0075C9 transparent;
+  z-index: 99;
+}
+
+@keyframes bounceUp {
+  0% {
+      -webkit-transform:translateY(0px);
+      -moz-transform:translateY(0px);
+      -o-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform:  translateY(0px);
+  }
+  100% {
+      -webkit-transform:translateY(-12px);
+      -moz-transform:translateY(-12px);
+      -o-transform: translateY(-12px);
+      -ms-transform: translateY(-12px);
+      transform:  translateY(-12px);
+  }
+}
+
+/*=== Shapes ===*/
+.triangle-right {
+  display: inline-block;
+  margin-right: 8px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 8px solid #fff;
+  border-bottom: 5px solid transparent;
+}
+
+.checkmark {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 24px;
+  width: 12;
+  border-bottom: 7px solid $blue;
+  border-right: 7px solid $blue;
+}

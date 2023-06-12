@@ -1,0 +1,47 @@
+// _variables.scss
+// =================
+
+//FONTS
+//======== 
+
+@import "https://fonts.googleapis.com/css?family=Nunito+Sans";
+/* https://fonts.googleapis.com/css?family=Space+Mono */
+/*
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+
+    Font Weights:
+    - Regular
+    - Regular Italic
+    - Bold
+    - Bold Italic
+*/
+
+// $headFont : 'Nunito Sans', sans-serif;
+$bodyFont : 'Nunito Sans', sans-serif;
+
+
+//Colors
+$blue          : #0075C9;
+$midblue       : #00B3E3;
+$lightblue     : #AEECEF;
+
+$dark           :#3B3D40;
+$charcoal       :#65646A;
+$lightgrey      :#CCCCCC;
+$smoke          :#F9F9F9;
+
+$orange         :#FFC658;
+$yellow         :#F6F59C;
+$red            :#EA6852;
+
+$lightGreen    : #7AE582;
+$green         : #2C975A;
+$purple        : #7C77B9;
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 20px;
+
+/* Var Ends */

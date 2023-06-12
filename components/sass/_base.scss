@@ -1,0 +1,196 @@
+/* FlexBox Cheat Sheet:::::::::::::::::
+  
+flex-flow: [flex-direction] [flex-wrap]
+    - flex-flow: row nowrap;
+
+flex: [flex-grow] [flex-shrink] [flex-basis] | defaults: 0 1 auto;
+  flex-grow: How much of the positive free space does this item get?
+  flex-shrink: How much negative free space can be removed from this item?
+  flex-basis: What is the size of the item before growing and shrinking happens?
+
+:::Samples:::
+  - flex: 0 1 auto; ( Items will not grow larger than their flex-basis size.
+                      Items use size set on the item, or get the size from the content )
+  - flex: 1 1 auto; (items can grow and fill the container as well as shrink if required)
+  - flex: 1 1 0; (Completely ignore the size set on the item. The items can grow and shrink from a flex-basis of 0)
+  - flex-basis: 200px; (The items can grow and shrink from a flex-basis of 200px)
+
+align-items: [stretch] | [flex-start] | [flex-end] | [center]
+  - this property will align the items on the cross axis.
+
+justify-content: [flex-start] | [flex-end] | [center] | [space-around] | [space-between] | [space-evenly]
+  - this property is used to align the items on the main axis, the direction in which flex-direction has set the flow.
+
+*/
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFont;
+  color: $charcoal;
+}
+
+//ATOMS
+h1 {
+  // font-size: 40px;
+  @include fluid-type(320px, 1200px, 24px, 40px);
+}
+
+h2 {
+  // font-size: 36px;
+  @include fluid-type(320px, 1200px, 22px, 36px);
+}
+
+h3 {
+  // font-size: 32px;
+  @include fluid-type(320px, 1200px, 20px, 32px);
+}
+
+h4 {
+  // font-size: 28px;
+  @include fluid-type(320px, 1200px, 18px, 28px);
+}
+
+h5 {
+  // font-size: 24px;
+  @include fluid-type(320px, 1200px, 16px, 24px);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+  padding: .8em 0 0;
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  margin: 18px 0;
+  line-height: 1.4em;
+  @include fluid-type(320px, 1200px, 16px, 20px);
+}
+
+
+
+//ORGANISMS
+
+header {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px;
+  // box-shadow: 0 2px 2px #CCCCCC; /* use when needed */
+}
+
+/*
+  Section used for full width sections
+*/
+
+/*==== Layout ====*/
+section {
+  padding: 0 20px;
+}
+
+/* section wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 0 20px;
+}
+
+.row-full {
+  width: 100%;
+}
+
+.row-x {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0 10px;
+}
+
+.row-y {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px 0;
+}
+
+.col-70 {
+  flex: 1 1 70%;
+}
+
+.col-60 {
+  flex: 1 1 60%;
+}
+
+.col-50 {
+  flex: 1 1 50%;
+}
+
+.col-40 {
+  flex: 1 1 40%;
+}
+
+.col-30 {
+  flex: 1 1 30%;
+}
+
+.col-25 {
+  flex: 1 1 25%;
+  min-width: 270px;
+}
+
+.col-auto {
+  flex: 1 1 auto;
+  min-width: 270px;
+}
+
+/*=== Buttons ===*/
+
+/* default button */
+.button {
+  display: inline-block;
+  font-weight: 300;
+  transition: opacity 0.5s ease;
+  text-transform: uppercase;
+  background-color: $green;
+  padding: 15px 46px;
+  margin: 10px 0;
+  border-radius: 100px;
+  color: $smoke;
+  text-decoration: none;
+  font-size: 24px;
+  border-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+//ClearFix Updated
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+//old versions of IE check
+.outdatedbrowser {
+  margin: 0 auto;
+  background: #ccc;
+  color: $blue;
+  padding: 1em;
+  text-align: center;
+
+  & a {
+    color: #dd6f53;
+  }
+}
